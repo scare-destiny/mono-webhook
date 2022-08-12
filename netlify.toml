@@ -3,3 +3,6 @@
 [[edge_functions]]
 function = "webhook"
 path = "/webhook"
+
+[build]
+  functions = "functions"
