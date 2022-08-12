@@ -1,12 +1,15 @@
 const axios = require("axios").default;
 
 exports.handler = async function (event, context) {
-	const body = JSON.parse(event.body);
+  const body = JSON.parse(event.body);
 
   let response = await axios.post(
     `https://script.google.com/macros/s/AKfycbziPb_3irULA1RlHD3p5A33EFKcvGY7Ec8wKtqcnbj7IJsAFasickXhta7J2Ed8mPIa-A/exec`,
     {
-			test: 'test'
+      headers: {
+        "Content-Type": "application/json;charset=utf-8",
+      },
+      test: 'test'
     }
   );
 
@@ -18,4 +21,3 @@ exports.handler = async function (event, context) {
     body: JSON.stringify({ message: "Hello World" }),
   };
 };
-
