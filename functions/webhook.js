@@ -1,7 +1,6 @@
 const axios = require("axios").default;
 // todo: revert to previos version
 exports.handler = async function (event, context) {
-  const body = JSON.parse(event.body);
 
   // let response = await axios.post(
   //   `https://script.google.com/macros/s/AKfycbziPb_3irULA1RlHD3p5A33EFKcvGY7Ec8wKtqcnbj7IJsAFasickXhta7J2Ed8mPIa-A/exec`,
